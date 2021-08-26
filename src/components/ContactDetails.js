@@ -2,6 +2,7 @@ import React from 'react';
 
 const ContactDetails=(props)=>{
 
+    console.log("In ContactDetails");
     console.log(props.details);
 
     return(
