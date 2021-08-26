@@ -6,16 +6,20 @@ class AddContactDetails extends Component{
         id:"",
         name:"",
         email:"",
-        mobile:""
+        mobile:"",
+        isValid:true
     }
 
     add=(event)=>{
-        //Stop of the refreshing of the page validation of the fields in the form
+        //Stop of the refreshing of the page
+        //validation of the fields in the form
         event.preventDefault();
         if(this.state.id ==="" || this.state.name==="" || this.state.email==="" || this.state.mobile===""){
             alert("All the fields are mandatory. \nThey can't be empty");
+            this.setState({isValid:false});
             return;
         }
+        this.setState({isValid:true});
         this.props.addContactHandler(this.state);
         //Initialize the state to clear the form
         this.setState({id:"", name:"", email:"", mobile:""});
@@ -24,11 +28,12 @@ class AddContactDetails extends Component{
     // add value property and onchange event handler for two way binding between 
     //state property and form elements
     render(){
+        console.log("In render function AddContactDetails");
         return(
-            <div className="add-contact">
+            <div className={`add-contact ${!this.state.isValid ?'invalid':''}`}>
                 <h1>Add Contact</h1>
                 <form>
-                    Id: <br/>
+                    <label style={{color:!this.state.isValid?"red":"black"}}>Id</label>: <br/>
                     <input type="text" name="id" value={this.state.id}
                         onChange={(event)=>{
                              this.setState({id:event.target.value})
@@ -36,7 +41,7 @@ class AddContactDetails extends Component{
                         }
                         /><br/>
 
-                        Name: <br/>
+                        <label style={{color:!this.state.isValid?"red":"black"}}>Name</label>: <br/>
                         <input type="text" name="name" value={this.state.name}
                         onChange={(event)=>{
                              this.setState({name:event.target.value})
@@ -44,7 +49,7 @@ class AddContactDetails extends Component{
                         }
                         /><br/>
 
-                        Email: <br/>
+                        <label style={{color:!this.state.isValid?"red":"black"}}>Email</label>: <br/>
                         <input type="email" name="email" value={this.state.email}
                         onChange={(event)=>{
                              this.setState({email:event.target.value})
@@ -52,7 +57,7 @@ class AddContactDetails extends Component{
                         }
                         /><br/>
 
-                        Mobile: <br/>
+                        <label style={{color:!this.state.isValid?"red":"black"}}>Mobile</label>: <br/>
                         <input type="number" name="mobile" value={this.state.mobile}
                         onChange={(event)=>{
                              this.setState({mobile:event.target.value})

@@ -2,12 +2,12 @@ import React from 'react';
 
 const ContactCard=(props)=>{
 
-    console.log(props.details);
+    console.log(props.card);
     
     return(
     <div className="contact">
         <h1>Contact Card</h1>
-        {props.details.map((listitem)=>{
+        {props.card.map((listitem)=>{
             return(
             <div className="card">
                 <div className="card-container">

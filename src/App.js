@@ -48,7 +48,7 @@ const addContactData = (person)=>{
     <div className="App">
       <Header/>
       <AddContactDetails addContactHandler={addContactData}/>
-      <ContactCard details={contactDetails}/>
+      <ContactCard card={contactDetails}/>
       <ContactDetails details={contactDetails}/>
     </div>
   );
