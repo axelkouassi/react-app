@@ -2,13 +2,53 @@ import React, { Component } from 'react';
 
 class AddContactDetails extends Component{
 
-    state={
-        id:"",
-        name:"",
-        email:"",
-        mobile:"",
-        isValid:true
+    //Lifecycle 1
+    constructor(props){
+        super(props)
+        this.state={
+            id:"",
+            name:"",
+            email:"",
+            mobile:"",
+            isValid:true
+        }
+        console.log("In Constructor of AddContactDetails");
+        console.log(props);
     }
+    
+    //Lifecycle 2
+    static getDerivedStateFromProps(){
+        console.log("In getDerivedStateFromProps AddContactDetails");
+        //console.log(this.props);
+      }
+
+      componentDidMount(){
+        ///api calls
+        //reading data from file or database 
+        console.log("In componentDidMount AddContactDetails");
+     }
+
+     //Lifecycle 3
+     shouldComponentUpdate(){
+        console.log("In shouldComponentUpdate AddContactDetails");
+        return true;
+    }
+
+    //Lifecycle 5
+    getSnapshotBeforeUpdate(){
+        console.log("In getSnapshotBeforeUpdate AddContactDetails");
+        return true; 
+    }
+
+    //Lifecycle 6
+    componentDidUpdate(){
+        console.log("In componentDidUpdate AddContactDetails");
+    }
+
+    componentWillUnmount(){
+        console.log("In componentWillUnmount AddContactDetails");
+    }
+    
 
     add=(event)=>{
         //Stop of the refreshing of the page
@@ -25,6 +65,7 @@ class AddContactDetails extends Component{
         this.setState({id:"", name:"", email:"", mobile:""});
     }
     
+    //Lifecycle 4
     // add value property and onchange event handler for two way binding between 
     //state property and form elements
     render(){
@@ -64,7 +105,7 @@ class AddContactDetails extends Component{
                             }
                         }
                         /><br/><br/>
-                        <button type="button" onClick={this.add}>Add Contact</button>
+                        <button type="button" id="add-btn" onClick={this.add}>Add Contact</button>
                 </form>
             </div>
         )
