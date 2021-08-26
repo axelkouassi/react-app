@@ -8,7 +8,7 @@ const ContactDetails=(props)=>{
     return(
         <div className="contact-list">
             <hr/>
-            <h1>Contact Details</h1>
+            <h1 id="contact-list-header">Contact Details</h1>
         <table>
             {/* <caption><h1>Contact Details</h1></caption> */}
             <thead>
