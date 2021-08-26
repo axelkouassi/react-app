@@ -53,6 +53,11 @@
 
 /*Body */
 
+#add-btn {
+  background-color: #69359c;
+  color: white;
+}
+
 table {
   /* border: solid black; */
   font-family: Arial, Helvetica, sans-serif;
@@ -60,19 +65,22 @@ table {
   width: 100%;
 }
 
-tr {
+/* tr {
   outline: thin solid;
+} */
+td {
+  text-align: center;
 }
 
 th,
 td {
   /* border: solid black; */
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 6px;
 }
 
 table tr:nth-child(even) {
-  background-color: #e6e6fa;
+  background-color: #dcd0ff;
 }
 
 table tr:hover {
@@ -80,11 +88,11 @@ table tr:hover {
 }
 
 table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #dcd0ff;
-  /* color: white; */
+  padding-top: 1px;
+  padding-bottom: 1px;
+  text-align: center;
+  background-color: #5f00a8;
+  color: white;
 }
 
 .add-contact {
@@ -118,7 +126,7 @@ table th {
 
 #del-btn {
   float: right;
-  background-color: #8a2be2;
+  background-color: #5c00a3;
   color: white;
 }
 
@@ -128,5 +136,5 @@ table th {
 }
 
 #name {
-  color: #9370db;
+  color: #5f00a8;
 }
