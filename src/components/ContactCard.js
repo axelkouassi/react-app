@@ -2,6 +2,7 @@ import React from 'react';
 
 const ContactCard=(props)=>{
 
+    console.log("In ContactCard");
     console.log(props.card);
     
     return(
