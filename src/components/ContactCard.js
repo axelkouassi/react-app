@@ -14,8 +14,8 @@ const ContactCard=(props)=>{
                     <button type="button" id="del-btn">Delete</button>
                     <h4 id="name">{listitem.name}</h4>
                     <p>{listitem.email}</p>
-                    <hr/>
                 </div>
+                <hr/>
             </div>);}
             ) // map
         }

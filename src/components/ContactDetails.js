@@ -6,8 +6,9 @@ const ContactDetails=(props)=>{
 
     return(
         <div className="contact-list">
+            <hr/>
             <h1>Contact Details</h1>
-        <table >
+        <table>
             {/* <caption><h1>Contact Details</h1></caption> */}
             <thead>
                 <tr>
