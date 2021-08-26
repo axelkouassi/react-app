@@ -25,7 +25,7 @@ const [contactDetails, setContactDetails]=useState([]);
 
 useEffect(() => {
   const retievedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '[]');
-  console.log("In useEffect 1...\nRetrieved data: "+ retievedData);
+  console.log("In useEffect 1, retrieving data..."+ retievedData);
   if(retievedData){
     setContactDetails(retievedData);
   }
@@ -33,11 +33,12 @@ useEffect(() => {
 
 useEffect(() => {
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contactDetails));
-  console.log("In useEffect 2...\nSetting data: "+ contactDetails);
+  console.log("In useEffect 2, setting data..."+ contactDetails);
 }, [contactDetails]);
 
 
 const addContactData = (person)=>{
+  console.log("In addContactData");
   let newContactDetails = [...contactDetails, {...person}]; //spread operator
   setContactDetails(newContactDetails);
   console.log(contactDetails);
