@@ -65,17 +65,14 @@ table {
   width: 100%;
 }
 
-/* tr {
-  outline: thin solid;
-} */
 td {
   text-align: center;
 }
 
-th,
+/* th, */
 td {
   /* border: solid black; */
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   padding: 6px;
 }
 
@@ -87,8 +84,8 @@ table tr:hover {
   background-color: #dcd0ff;
 }
 
-table th {
-  padding-top: 1px;
+th {
+  padding: none;
   padding-bottom: 1px;
   text-align: center;
   background-color: #5f00a8;
@@ -122,6 +119,11 @@ table th {
 
 .contact-list h1 {
   text-align: center;
+}
+
+#contact-list-header {
+  padding-bottom: 1px;
+  padding-top: 1px;
 }
 
 #del-btn {
