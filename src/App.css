@@ -1,31 +1,19 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  width: 100%;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
+  padding-top: 10px;
+  padding-bottom: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +23,87 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-header {
+  background-color: #7f00ff;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* font-size: calc(10px + 0.1vmin); */
+  display: flex;
+  flex-direction: column;
+  min-height: 0.1vh;
+  padding: none;
+  /* #282c34; */
+  /* 
+  
+  
+   */
+}
+
+#header-title {
+  padding: none;
+}
+
+.App-link {
+  color: #61dafb;
+  padding: 0;
+}
+
+/*Body */
+
+table {
+  /* border: solid black; */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  outline: thin solid;
+}
+
+/* td {
+  border: solid black;
+} */
+
+.add-contact {
+  width: 50%;
+  height: 100px;
+  float: left;
+  padding-left: 80px;
+  padding-top: none;
+}
+
+.contact {
+  margin-left: 50%;
+  height: 100px;
+  padding: 10px;
+  padding-top: none;
+  padding-right: 80px;
+}
+.contact-list {
+  height: 100px;
+  float: inline-start;
+  padding-top: 400px;
+  margin: auto;
+}
+
+.contact-list h1 {
+  text-align: center;
+}
+
+#del-btn {
+  float: right;
+  background-color: #8a2be2;
+  color: white;
+}
+
+.card {
+  /* border: solid black; */
+  padding: 10px;
+}
+
+#name {
+  color: #9370db;
 }
