@@ -49,7 +49,7 @@ const addContactData = (person)=>{
   return (
     <div className="App">
       <Header/>
-      <ContactFinder search={contactDetails}/>
+      <ContactFinder contacts={contactDetails}/>
       <hr/>
       <AddContactDetails addContactHandler={addContactData}/>
       <ContactCard card={contactDetails}/>
