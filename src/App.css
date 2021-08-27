@@ -187,7 +187,7 @@ th {
 .contact-list {
   height: 100px;
   float: inline-start;
-  padding-top: 280px;
+  padding-top: 60px;
   margin: auto;
   /* overflow-x: auto; */
 }
@@ -215,4 +215,21 @@ th {
 
 #name {
   color: #5f00a8;
+}
+
+/*Card Icon*/
+#card-icon-con {
+  /* height: 100px; */
+  float: inline-start;
+  padding-top: 280px;
+  margin: auto;
+  overflow-x: auto;
+}
+
+#card-icon-con-title {
+  text-align: center;
+}
+
+.container {
+  padding-top: 30px;
 }

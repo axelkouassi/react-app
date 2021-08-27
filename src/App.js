@@ -7,6 +7,7 @@ import { useState } from 'react';
 import {useEffect} from 'react';
 import ContactCard from './components/ContactCard';
 import ContactFinder from './components/ContactFinder';
+import PersonListIcon from './components/PersonListIcon';
 
 function App() {
 
@@ -54,6 +55,7 @@ const addContactData = (person)=>{
       <hr/>
       <AddContactDetails addContactHandler={addContactData}/>
       <ContactCard card={contactDetails}/>
+      <PersonListIcon cardIcon={contactDetails}/>
       <ContactDetails details={contactDetails}/>
     </div>
   );

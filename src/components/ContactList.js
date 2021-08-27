@@ -8,7 +8,6 @@ class  ContactList extends Component {
         showContacts:true
     }
     
-
     toggleShowHandler=()=>{
         console.log("Toggle show handler ContactList");
         console.log(this.props.cList);
