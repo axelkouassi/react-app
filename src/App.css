@@ -208,6 +208,7 @@ th {
 .card {
   /* border: solid black; */
   padding: 10px;
+  margin-bottom: 15px;
 }
 
 #name {
