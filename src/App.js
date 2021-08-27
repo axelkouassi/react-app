@@ -5,6 +5,7 @@ import AddContactDetails from './components/AddContactDetails';
 import { useState } from 'react';
 import {useEffect} from 'react';
 import ContactCard from './components/ContactCard';
+import ContactFinder from './components/ContactFinder';
 
 function App() {
 
@@ -48,6 +49,8 @@ const addContactData = (person)=>{
   return (
     <div className="App">
       <Header/>
+      <ContactFinder search={contactDetails}/>
+      <hr/>
       <AddContactDetails addContactHandler={addContactData}/>
       <ContactCard card={contactDetails}/>
       <ContactDetails details={contactDetails}/>

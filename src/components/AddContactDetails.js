@@ -17,10 +17,10 @@ class AddContactDetails extends Component{
     }
     
     //Lifecycle 2
-    static getDerivedStateFromProps(){
-        console.log("In getDerivedStateFromProps AddContactDetails");
-        //console.log(this.props);
-      }
+    // static getDerivedStateFromProps(){
+    //     console.log("In getDerivedStateFromProps AddContactDetails");
+    //     //console.log(this.props);
+    //   }
 
       componentDidMount(){
         ///api calls
