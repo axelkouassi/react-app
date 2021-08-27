@@ -182,10 +182,12 @@ th {
 .contact h1 {
   text-align: justify;
 }
+
+/*ContactDetails*/
 .contact-list {
   height: 100px;
   float: inline-start;
-  padding-top: 400px;
+  padding-top: 280px;
   margin: auto;
   /* overflow-x: auto; */
 }
