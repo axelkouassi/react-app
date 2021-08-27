@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
-    state = {  }
+    componentDidMount(){
+        console.log("In componentDidMount contact")
+    }
+    componentWillUnmount(){
+        console.log("In componentWillUnMount contact will unmount");
+    }
     render() { 
         console.log(this.props.name)
         return (
