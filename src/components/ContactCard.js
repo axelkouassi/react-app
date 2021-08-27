@@ -11,7 +11,7 @@ const ContactCard=(props)=>{
         <h1>Contact Card</h1>
         {props.card.map((listitem)=>{
             return(
-            <div className="card">
+            <div key={listitem.id} name={listitem.name} className="card">
                 <div className="card-container">
                     <button type="button" id="del-btn">Delete</button>
                     <h4 id="name">{listitem.name}</h4>
