@@ -1,23 +1,12 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useRef } from 'react';
 import ContactList from './ContactList';
 
-const contacts = [
-    {
-      id:"p1",
-      name:"Jane Doe",
-      email:"janedoe@gmail.com",
-      mobile:"0123456789"
-    },
-    {
-        id:"p2",
-        name:"Gane Doe",
-        email:"janedoe@gmail.com",
-        mobile:"0123456789"
-      }
-]
+const ContactFinder=(props)=>{
 
-class ContactFinder extends Component {
-    constructor(props) {
+    console.log("In ContactFinder");
+    console.log(props.contacts);
+
+    /* constructor(props) {
         super(props);
         this.state = {
             selectedContact:[],
@@ -30,7 +19,7 @@ class ContactFinder extends Component {
 
     componentDidMount(){
         console.log("In componentDidMount ContactFinder");
-        this.setState({selectedContact:contacts});
+        this.setState({selectedContact:this.props.contacts});
     }
 
     componentDidUpdate(prevProps, prevState){
@@ -41,7 +30,7 @@ class ContactFinder extends Component {
             console.log("In componentDidUpdate ContactFinder 3");
             this.setState(
                 {
-                    selectedContact:contacts.filter((contact)=>{
+                    selectedContact:this.props.contacts.filter((contact)=>{
                         return contact.name.includes(this.state.searchText);
                     })
                 }
@@ -63,7 +52,47 @@ class ContactFinder extends Component {
                 <ContactList cList ={this.state.selectedContact}/>
             </Fragment>
         );
+    } */
+
+    
+
+    /* searchChangeHandler(event){
+        this.setState({searchText:event.target.value});
+    } */
+
+    //Using it to create reference of search text box instead of event.target.value
+    const inpref = useRef("");
+
+    const getSearchTerm = ()=>{
+        console.log("Inside getSearchTerm");
+        props.searchKeyword(inpref.current.value);
     }
+
+    const deleteContact=(id)=>{
+        props.getContactId(id);
+    }
+
+    return (
+    <div>
+        <div className="form-group has-search col-8 search-bar">
+            <input type="search" placeholder="Search..." 
+                    id ="search" className="form-control"
+                    ref={inpref} value={props.searchText} onChange={getSearchTerm}>
+            </input>
+        </div>
+        
+        {/* {props.contacts.map(contacts=>{
+            return(<Fragment></Fragment>);
+        }) // map
+    }  */}
+    
+    <div>
+        <ContactList cList ={props.contacts}/>
+    </div>
+            
+        
+    </div>
+    );
 }
  
 export default ContactFinder;
