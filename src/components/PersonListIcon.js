@@ -5,7 +5,7 @@ const PersonListIcon = (props)=>{
     return(
     <div id="card-icon-con">
         <hr/>
-        <h2 id="card-icon-con-title">Person List Icon</h2>
+        <h2 id="card-icon-con-title">Contact List</h2>
             {
             props.cardIcon.map((card)=>{
                 return (<ContactCardIcon cardIcon ={card}/>)
