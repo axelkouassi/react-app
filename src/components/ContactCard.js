@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import {PersonCircle,Trash,PenFill} from 'react-bootstrap-icons';
 
 const ContactCard=(props)=>{
 
@@ -14,6 +15,7 @@ const ContactCard=(props)=>{
             <div key={listitem.id} name={listitem.name} className="card">
                 <div className="card-container">
                     <button type="button" id="del-btn">Delete</button>
+                    <div className="text-primary" ><PenFill/></div>
                     <h4 id="name">{listitem.name}</h4>
                     <p>{listitem.email}</p>
                 </div>
