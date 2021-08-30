@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {PersonCircle,Trash} from 'react-bootstrap-icons';
+import {PersonCircle,Trash,PenFill} from 'react-bootstrap-icons';
 
 const ContactCardIcon=(props)=>{
     console.log(props.cardIcon);
@@ -10,11 +10,14 @@ const ContactCardIcon=(props)=>{
             <div className="col-1">
                <PersonCircle/>    
             </div>  
-            <div className="col-8 text-left">
+            <div className="col-7 text-left">
                <p>{name}</p>
                <p>{email}</p>   
             </div>   
-            <div className="col-3">
+            <div className="col-2">
+               <div className="text-primary" ><PenFill/></div> 
+            </div>
+            <div className="col-2">
                <Trash/>    
             </div>
           </div>
