@@ -33,19 +33,6 @@ const ContactDetails=(props)=>{
                 })}
         </tbody>
         </table>
-
-        {/* <h1>Contact List</h1>
-
-        <ul>
-        {props.details.map((listitem)=>{
-                return(
-                    <div>
-                        <li key={listitem.id}>{listitem.id}, {listitem.name}, {listitem.email}, {listitem.mobile}</li>
-                                </div>
-                        );
-                })}
-            
-        </ul> */}
         </div>
     );
 
